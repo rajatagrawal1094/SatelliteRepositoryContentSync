@@ -13,13 +13,9 @@ Enter Credentials and click Log In button
 
 ![login](/images/2-login.png)
 
-Navigate to **Content > Red Hat Repositories**
+Navigate to **Content > Red Hat Repositories**. You will now see all available repositories. 
 
 ![repositories](/images/3-repositories.png)
-
-You will now see all available repositories. 
-
-![available](/images/4-available.png)
 
 We will be enabling the following:
 
@@ -32,13 +28,17 @@ We will be enabling the following:
 | Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 RPMs      | satellite-capsule-6.15-for-rhel-8-x86_64-rpms     |
 | Red Hat Satellite Maintenance 6.15 for RHEL 8 x86_64 RPMs  | satellite-maintenance-6.15-for-rhel-8-x86_64-rpms |
 
-In the search bar, search for the repository names (one at a time). Click on the drop down arrow on the left side to see the available architectures.
+In the search bar, search for the repository names (one at a time). Click on the drop down arrow on the left side to see the available architectures
 
-![search](/images/5-search.png)
+![search](/images/4-search.png)
 
-click blue plus icon to enable the repository.
+click the blue plus icon to enable the repository
 
-![enable](/images/6-enable.png)
+![enable](/images/5-enable.png)
+
+You will be able to see the enabled repository in the **Enabled Repositories** Column
+
+![column](/images/6-column.png)
 
 You will be able to see the below output after you enable all the above listed repositories
 
