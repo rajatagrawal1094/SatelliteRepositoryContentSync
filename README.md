@@ -144,7 +144,7 @@ Additionally, Run the following command to enable the other repositories
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7416 --releasever 8
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7441 --releasever 8
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 21174
-[ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Satellite Capsule" --id 21174
+[ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Satellite Capsule" --id 21171
 ```
 
 Run the following command to verify the repository is enabled
