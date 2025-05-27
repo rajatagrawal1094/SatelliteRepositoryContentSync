@@ -224,3 +224,11 @@ Run the following command to check the status on the repository synchronization
 ![check_final_status_1](/images/25-check_final_status_1.png)
 
 ![check_final_status_2](/images/26-check_final_status_2.png)
+
+Run the following command to get the detailed information on each synchronized repository
+
+```console                                                   
+[ragrawal@satellite ~]$ hammer repository info --name "Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.5" --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
+```
+
+![check_final_details](/images/27-check_final_details.png)
