@@ -121,10 +121,10 @@ Run the following command to verify the repository is enabled
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
 ```
 
-Run the following command to list the enabled repositories under a product
+Run the following command to list the enabled repositories for the product "Red Hat Enterprise Linux for x86_64"
 
 ```console
-[ragrawal@satellite ~]$ hammer product list --organization "redhat"
+[ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep "Red Hat Enterprise Linux for x86_64"
 ```
 
 ## Synchronizing Content using hammer CLI
