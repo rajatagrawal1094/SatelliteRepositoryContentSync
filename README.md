@@ -4,10 +4,10 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- Enabling Repository using Red Hat Satellite Dashboard(#enabling-repository-using-red-hat-satellite-dashboard)
-- Synchronizing Content using Red Hat Satellite Dashboard(#synchronizing-content-using-red-hat-satellite-dashboard)
-- Enabling Repository using hammer CLI(#enabling-repository-using-hammer-cli)
-- Synchronizing Content using hammer CLI(#synchronizing-content-using-hammer-cli)
+- [Enabling Repository using Red Hat Satellite Dashboard](#enabling-repository-using-red-hat-satellite-dashboard)
+- [Synchronizing Content using Red Hat Satellite Dashboard](#synchronizing-content-using-red-hat-satellite-dashboard)
+- [Enabling Repository using hammer CLI](#enabling-repository-using-hammer-cli)
+- [Synchronizing Content using hammer CLI](#synchronizing-content-using-hammer-cli)
 - [Summary](#summary)
 
 ## Enabling Repository using Red Hat Satellite Dashboard
