@@ -162,11 +162,6 @@ Additionally, Run the following commands to verify if all the other repositories
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 21174
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Satellite Capsule" --id 21171
 ```
-Run the following command to list all the enabled repositories
-
-```console
-[ragrawal@satellite ~]$ hammer repository list --organization "redhat"
-```
 
 Run the following command to list the enabled repositories for the product "Red Hat Enterprise Linux for x86_64" and "Red Hat Satellite Capsule"
 
@@ -174,16 +169,26 @@ Run the following command to list the enabled repositories for the product "Red 
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep -e "Red Hat Enterprise Linux for x86_64" -e "Red Hat Satellite Capsule"
 ```
 
-## Synchronizing Content using hammer CLI
-
-Run the following command to synchronize the repositories for the product "Red Hat Enterprise Linux for x86_64"
+Run the following command to list all the enabled repositories
 
 ```console
-[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 15
+[ragrawal@satellite ~]$ hammer repository list --organization "redhat"
 ```
 
-Run the following command to synchronize the repositories for the product "Red Hat Satellite Capsule"
+## Synchronizing Content using hammer CLI
+
+Run the following commands to synchronize the all repositories for the product "Red Hat Enterprise Linux for x86_64"
 
 ```console
-[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Satellite Capsule" --id 155
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 1
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 2
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 3
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 4
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 5
+```
+
+Run the following command to synchronize the repository for the product "Red Hat Satellite Capsule"
+
+```console
+[ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Satellite Capsule" --id 6
 ```
