@@ -12,7 +12,7 @@
 
 ## Introduction
 
-After importing a Subscription Manifest into Red Hat Satellite, the next critical step is to enable the required Red Hat repositories and synchronize content to make it available for managed systems. This ensures that packages, errata, and updates are accessible for lifecycle environments, content views, and system patching.
+After importing a Subscription Manifest into Red Hat Satellite, the next critical step is to enable the required Red Hat repositories and synchronize content to make them available to managed systems. This ensures that packages, errata, and updates are accessible for lifecycle environments, content views, and system patching.
 
 This guide walks you through the process of enabling repositories and synchronizing content using both the Satellite Web UI and the `hammer` CLI. Whether you're a new administrator exploring the dashboard or an automation-oriented engineer using CLI, this tutorial provides step-by-step instructions for both approaches.
 
@@ -40,7 +40,7 @@ We will be enabling the following:
 | Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8   | rhel-8-for-x86_64-appstream-rpms             	 |
 | Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8      | rhel-8-for-x86_64-baseos-rpms             	 |
 | Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.5 | rhel-9-for-x86_64-appstream-rpms             	 |
-| Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 9.5    | rhel-9-for-x86_64-baseos-rpms             	 |
+| Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.5    | rhel-9-for-x86_64-baseos-rpms             	 |
 | Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 RPMs      | satellite-capsule-6.15-for-rhel-8-x86_64-rpms     |
 | Red Hat Satellite Maintenance 6.15 for RHEL 8 x86_64 RPMs  | satellite-maintenance-6.15-for-rhel-8-x86_64-rpms |
 
@@ -48,7 +48,7 @@ In the search bar, search for the repository names (one at a time). Click on the
 
 ![search](/images/4-search.png)
 
-click the blue plus icon to enable the repository
+Click the blue plus icon to enable the repository
 
 ![enable](/images/5-enable.png)
 
@@ -129,7 +129,7 @@ Additionally, Run the following command to list all the available repository set
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Satellite Capsule"
 ```
 
-Run the following command to list the individual repostories under the repository sets. You will also be able to see the specific release version and if the repositories are enabled
+Run the following command to list the individual repositories under the repository sets. You will also be able to see the specific release version and if the repositories are enabled
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
