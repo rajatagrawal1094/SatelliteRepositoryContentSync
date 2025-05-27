@@ -85,28 +85,46 @@ You will be able to see the below output once the synchronization is completed
 Run the following command to check all the available products and to check if any repositories are enabled for those products
 
 ```console
-[root@localhost ~]# hammer product list --organization "redhat"
+[ragrawal@satellite ~]$ hammer product list --organization "redhat"
+```
+
+Run the following command to check if any repositories are enabled for the product "Red Hat Enterprise Linux for x86_64"
+
+```console
+[ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep "Red Hat Enterprise Linux for x86_64"
 ```
 
 Run the following command to list all the available repository sets of "Red Hat Enterprise Linux for x86_64" product
 
 ```console
-[root@localhost ~]# hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
+[ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
 ```
 
 > [!NOTE]
 > The above command lists the repository sets that are available to be enabled under a given product and organization. These are essentially groups of repositories that Red Hat provides.
 
-Run the following command to individual repository under a repository set
+Run the following command to list the individual repositories under a repository set. You will also be able to see specific release version and if the repositories are enabled.
 
 ```console
-[root@localhost ~]# hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
+[ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
 ```
 
 Run the following command to enable the repository
 
 ```console
-[root@localhost ~]# hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049 --releasever 9.5
+[ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049 --releasever 9.5
+```
+
+Run the following command to verify the repository is enabled
+
+```console
+[ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
+```
+
+Run the following command to list the enabled repositories under a product
+
+```console
+[ragrawal@satellite ~]$ hammer product list --organization "redhat"
 ```
 
 ## Synchronizing Content using hammer CLI
