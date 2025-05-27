@@ -101,5 +101,6 @@ Run the following command to individual repository under a repository set
 
 ```console
 [root@localhost ~]# hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
+```
 
 ## Synchronizing Content using hammer CLI
