@@ -88,4 +88,10 @@ Run the following command to check all the available products and to check if an
 [root@localhost ~]# hammer product list --organization "redhat"
 ```
 
+Run the following command to list all the available repositories of "Red Hat Enterprise Linux for x86_64" product
+
+```console
+[root@localhost ~]# hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
+```
+
 ## Synchronizing Content using hammer CLI
