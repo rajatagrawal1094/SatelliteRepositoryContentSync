@@ -100,14 +100,14 @@ Run the following command to list all the available repository sets for "Red Hat
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
 ```
 
+> [!NOTE]
+> The above command lists the repository sets that are available to be enabled under a given product and organization. These are essentially groups of repositories that Red Hat provides.
+
 Additionally, Run the following command to list all the available repository sets for "Red Hat Satellite Capsule" product
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Satellite Capsule"
 ```
-
-> [!NOTE]
-> The above command lists the repository sets that are available to be enabled under a given product and organization. These are essentially groups of repositories that Red Hat provides.
 
 Run the following command to list the individual repostories under the repository sets. You will also be able to see the specific release version and if the repositories are enabled
 
