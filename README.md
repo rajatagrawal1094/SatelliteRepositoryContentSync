@@ -103,4 +103,10 @@ Run the following command to individual repository under a repository set
 [root@localhost ~]# hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
 ```
 
+Run the following command to enable the repository
+
+```console
+[root@localhost ~]# hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049 --releasever 9.5
+```
+
 ## Synchronizing Content using hammer CLI
