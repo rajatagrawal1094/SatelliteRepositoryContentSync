@@ -175,4 +175,10 @@ Additionally, Run the followinig command to list the enabled repositories for th
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep "Red Hat Satellite Capsule"
 ```
 
+Run the following command to list all the enabled repositories
+
+```console
+[ragrawal@satellite ~]$ hammer repository list --organization "redhat"
+```
+
 ## Synchronizing Content using hammer CLI
