@@ -10,6 +10,12 @@
 - [Synchronizing Content using hammer CLI](#synchronizing-content-using-hammer-cli)
 - [Summary](#summary)
 
+## Introduction
+
+After importing a Subscription Manifest into Red Hat Satellite, the next critical step is to enable the required Red Hat repositories and synchronize content to make it available for managed systems. This ensures that packages, errata, and updates are accessible for lifecycle environments, content views, and system patching.
+
+This guide walks you through the process of enabling repositories and synchronizing content using both the Satellite Web UI and the `hammer` CLI. Whether you're a new administrator exploring the dashboard or an automation-oriented engineer using CLI, this tutorial provides step-by-step instructions for both approaches.
+
 ## Enabling Repository using Red Hat Satellite Dashboard
 
 Open a browser, enter the Red Hat Satellite Server URL - https://satellite.example.com
@@ -232,3 +238,15 @@ Run the following command to get the detailed information on each synchronized r
 ```
 
 ![check_final_details](/images/27-check_final_details.png)
+
+## Summary
+
+In this blog, you learned how to enable Red Hat repositories and synchronize their content within Red Hat Satellite. The guide covered:
+
+- Navigating the Satellite Web UI to enable specific repositories and trigger content synchronization.
+- Using `hammer` CLI commands to list, enable, and verify repositories.
+- Executing repository synchronization via command line for efficiency and automation.
+- Verifying synchronization results through both the UI and CLI.
+
+By completing these steps, your Satellite Server is now prepared to serve content to registered clients and build custom content views for system provisioning and lifecycle management.
+
