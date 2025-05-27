@@ -78,7 +78,7 @@ Click **Synchronize Now** to synchronize content of all the repositories
 
 You will be able to see the below output once the synchronization is completed
 
-![completed](/images/13-completes.png)
+![completed](/images/13-completed.png)
 
 ## Enabling Repository using hammer CLI
 
@@ -88,11 +88,15 @@ Run the following command to list all the enabled repositories
 [ragrawal@satellite ~]$ hammer repository list --organization "redhat"
 ```
 
+![repo_list](/images/14-repo_list.png)
+
 Run the following command to check all the available products and to check if any repositories are enabled for those products
 
 ```console
 [ragrawal@satellite ~]$ hammer product list --organization "redhat"
 ```
+
+![product_list](/images/15-product_list.png)
 
 Run the following command to check if any repositories are enabled for the product "Red Hat Enterprise Linux for x86_64"
 
@@ -100,11 +104,15 @@ Run the following command to check if any repositories are enabled for the produ
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep "Red Hat Enterprise Linux for x86_64"
 ```
 
+![rhel_list](/images/16-rhel_list.png)
+
 Run the following command to list all the available repository sets for "Red Hat Enterprise Linux for x86_64" product
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
 ```
+
+![all_repo_list](/images/17-all_repo_list.png)
 
 > [!NOTE]
 > The above command lists the repository sets that are available to be enabled under a given product and organization. These are essentially groups of repositories that Red Hat provides.
@@ -120,6 +128,8 @@ Run the following command to list the individual repostories under the repositor
 ```console
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
 ```
+
+![available_list](/images/18-available_list.png)
 
 Additionally, Run the following commands to list the individual repositories under their respective repository sets.
 
@@ -137,6 +147,8 @@ Run the following command to enable the repository
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049 --releasever 9.5
 ```
 
+![enable_repo](/images/19-enable_repo.png)
+
 Additionally, Run the following command to enable the other repositories
 
 ```console
@@ -152,6 +164,8 @@ Run the following command to verify the repository is enabled
 ```console
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
 ```
+
+![check_enabled](/images/20-check_enabled.png)
 
 Additionally, Run the following commands to verify if all the other repositories are enabled
 
@@ -191,4 +205,10 @@ Run the following command to synchronize the repository for the product "Red Hat
 
 ```console
 [ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Satellite Capsule" --id 6
+```
+
+Run the following command to check the status on the repository synchronization
+
+```console
+[ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep -e "Red Hat Enterprise Linux for x86_64" -e "Red Hat Satellite Capsule"
 ```
