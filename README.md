@@ -94,20 +94,30 @@ Run the following command to check if any repositories are enabled for the produ
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep "Red Hat Enterprise Linux for x86_64"
 ```
 
-Run the following commands to list all the available repository sets for "Red Hat Enterprise Linux for x86_64" and "Red Hat Satellite Capsule" products
+Run the following command to list all the available repository sets for "Red Hat Enterprise Linux for x86_64" product
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Enterprise Linux for x86_64"
+```
+
+Additionally, Run the following command to list all the available repository sets for "Red Hat Satellite Capsule" product
+
+```console
 [ragrawal@satellite ~]$ hammer repository-set list --organization "redhat" --product "Red Hat Satellite Capsule"
 ```
 
 > [!NOTE]
 > The above command lists the repository sets that are available to be enabled under a given product and organization. These are essentially groups of repositories that Red Hat provides.
 
-Run the following commands to list the individual repositories under their respective repository sets. You will also be able to see specific release version and if the repositories are enabled.
+Run the following command to list the individual repostories under the repository sets. You will also be able to see the specific release version and if the repositories are enabled
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049
+```
+
+Additionally, Run the following commands to list the individual repositories under their respective repository sets.
+
+```console
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11055
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7416
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7441
@@ -115,10 +125,15 @@ Run the following commands to list the individual repositories under their respe
 [ragrawal@satellite ~]$ hammer repository-set available-repositories --organization "redhat" --product "Red Hat Satellite Capsule" --id 21171
 ```
 
-Run the following command to enable the repositories
+Run the following command to enable the repository
 
 ```console
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11049 --releasever 9.5
+```
+
+Additionally, Run the following command to enable the other repositories
+
+```console
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 11055 --releasever 9.5
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7416 --releasever 8
 [ragrawal@satellite ~]$ hammer repository-set enable --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 7441 --releasever 8
