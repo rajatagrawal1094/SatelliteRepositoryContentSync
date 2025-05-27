@@ -82,6 +82,12 @@ You will be able to see the below output once the synchronization is completed
 
 ## Enabling Repository using hammer CLI
 
+Run the following command to list all the enabled repositories
+
+```console
+[ragrawal@satellite ~]$ hammer repository list --organization "redhat"
+```
+
 Run the following command to check all the available products and to check if any repositories are enabled for those products
 
 ```console
