@@ -183,11 +183,15 @@ Run the following command to list the enabled repositories for the product "Red 
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep -e "Red Hat Enterprise Linux for x86_64" -e "Red Hat Satellite Capsule"
 ```
 
+![list_all_enabled](/images/21-list_all_enabled.png)
+
 Run the following command to list all the enabled repositories
 
 ```console
 [ragrawal@satellite ~]$ hammer repository list --organization "redhat"
 ```
+
+![detailed_all_enabled](/images/22-detailed_all_enabled.png)
 
 ## Synchronizing Content using hammer CLI
 
@@ -201,14 +205,22 @@ Run the following commands to synchronize the all repositories for the product "
 [ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Enterprise Linux for x86_64" --id 5
 ```
 
+![sync_all_rhel](/images/23-sync_all_rhel.png)
+
 Run the following command to synchronize the repository for the product "Red Hat Satellite Capsule"
 
 ```console
 [ragrawal@satellite ~]$ hammer repository synchronize --async --organization "redhat" --product "Red Hat Satellite Capsule" --id 6
 ```
 
+![sync_sat](/images/24-sync_sat.png)
+
 Run the following command to check the status on the repository synchronization
 
 ```console
 [ragrawal@satellite ~]$ hammer product list --organization "redhat" | grep -e "Red Hat Enterprise Linux for x86_64" -e "Red Hat Satellite Capsule"
 ```
+
+![check_final_status_1](/images/25-check_final_status_1.png)
+
+![check_final_status_2](/images/26-check_final_status_2.png)
