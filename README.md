@@ -1,6 +1,16 @@
 # Enabling Repository and Syncing Content to Red Hat Satellite
 
-## Enabling Repository
+[Red Hat Satellite Learning Series Main Menu](https://github.com/rajatagrawal1094/RedHatSatellite)
+
+## Table of Contents
+- [Introduction](#introduction)
+- Enabling Repository using Red Hat Satellite Dashboard(#enabling-repository-using-red-hat-satellite-dashboard)
+- Synchronizing Content using Red Hat Satellite Dashboard(#synchronizing-content-using-red-hat-satellite-dashboard)
+- Enabling Repository using hammer CLI(#enabling-repository-using-hammer-cli)
+- Synchronizing Content using hammer CLI(#synchronizing-content-using-hammer-cli)
+- [Summary](#summary)
+
+## Enabling Repository using Red Hat Satellite Dashboard
 
 Open a browser, enter the Red Hat Satellite Server URL - https://satellite.example.com
 
@@ -44,6 +54,8 @@ You will be able to see the below output after you enable all the above listed r
 
 ![listed](/images/7-listed.png)
 
+## Synchronizing Content using Red Hat Satellite Dashboard
+
 Navigate to **Content > Products** to see a list of Products. You can synchronize all repositories related to a Product or selected repositories of a product.
 
 ![products](/images/8-products.png)
@@ -67,3 +79,13 @@ Click **Synchronize Now** to synchronize content of all the repositories
 You will be able to see the below output once the synchronization is completed
 
 ![completed](/images/13-completes.png)
+
+## Enabling Repository using hammer CLI
+
+Run the following command to check all the available products and to check if any repositories are enabled for those products
+
+```console
+[root@localhost ~]# hammer product list --organization "redhat"
+```
+
+## Synchronizing Content using hammer CLI
